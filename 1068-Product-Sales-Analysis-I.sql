@@ -1,12 +1,8 @@
-# Write your MySQL query statement below
 SELECT 
-    product_name,year,price
+    p.product_name, s.year, s.price 
 FROM 
-    Sales s
+    Sales AS s
 JOIN 
-    Product p
-ON  
-    s.product_id = p.product_id
-GROUP BY 
-    sale_id
-;
+    Product AS p
+ON 
+    s.product_id = p.product_id;
